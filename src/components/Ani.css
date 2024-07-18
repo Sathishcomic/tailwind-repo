@@ -1,0 +1,109 @@
+/* Keyframes for spinning each icon */
+@keyframes moveUpRight {
+    0% { transform: translate(-50%, -20px); }
+    50% { transform: translate(20px, -30px); }
+    100% { transform: translate(-50%, -20px); }
+}
+
+@keyframes spin2 {
+    0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+@keyframes spin3 {
+    0% { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(140px) rotate(-360deg); }
+}
+
+@keyframes spin4 {
+    0% { transform: rotate(0deg) translateX(160px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
+}
+
+@keyframes spin5 {
+    0% { transform: rotate(0deg) translateX(180px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(180px) rotate(-360deg); }
+}
+
+@keyframes spin6 {
+    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+/* Container for the icons */
+.icon-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Base icon styles */
+.icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 80px;  /* Adjust the size of the images as needed */
+    height: 80px;  /* Adjust the size of the images as needed */
+}
+
+/* Spin animations and glow effect */
+.icon-1 {
+    animation: MoveUpRight  20s  infinite ease-in-out, glow 2s ease-in-out infinite;
+    top: 10%;
+    left: 20%;
+}
+
+.icon-2 {
+    animation: spin2 15s linear infinite, glow 2s ease-in-out infinite alternate;
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+    top: 80%;
+    left: 10%;
+}
+
+.icon-3 {
+    animation: spin3 20s linear infinite, glow 2s ease-in-out infinite alternate;
+    transform: rotate(0deg) translateX(140px) rotate(0deg);
+    top: 70%;
+    left: 70%;
+}
+
+.icon-4 {
+    animation: spin4 25s linear infinite, glow 2s ease-in-out infinite alternate;
+    transform: rotate(0deg) translateX(160px) rotate(0deg);
+    top: 20%;
+    left: 90%;
+}
+
+.icon-5 {
+    animation: spin5 5s linear infinite, glow 2s ease-in-out infinite alternate;
+    transform: rotate(0deg) translateX(180px) rotate(0deg);
+    top: 20%;
+    left: 80%;
+}
+
+.icon-6 {
+    animation: spin6 10s linear infinite, glow 2s ease-in-out infinite alternate;
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+}
+
+/* Glowing effect for the h1 tag */
+.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+    text-shadow: 0 0 5px #f80505, 0 0 10px #03fdfd, 0 0 15px #00fc3b;
+}
+
+/* Glowing effect for the images */
+.glow-effect {
+    filter: brightness(0.8) saturate(1.2);
+    box-shadow: 0 0 10px #cfec09, 0 0 20px #00cfff, 0 0 30px #f80505;
+}
+
+/* Glow keyframes */
+@keyframes glow {
+    from {
+        filter: brightness(0.8) saturate(1.2);
+    }
+    to {
+        filter: brightness(1) saturate(1.5);
+    }
+}

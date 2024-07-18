@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MovingText from './components/move';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Animation from './components/animation';
+import MovingIcon from './components/updatedmoving';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-      <App />
+    <MovingIcon/>
 
   </React.StrictMode>
 );
